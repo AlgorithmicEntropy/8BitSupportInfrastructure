@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ControlLogicEEPROMGenerator.Core
+namespace CompLib
 {
-    class ControlData
+    public class ControlData
     {
         private int wordLength;
         private Dictionary<int, char[]> data = new Dictionary<int, char[]>();

@@ -4,6 +4,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+using CompLib;
+
 namespace ControlLogicEEPROMGenerator.Core
 {
     class DataToFileSplitter

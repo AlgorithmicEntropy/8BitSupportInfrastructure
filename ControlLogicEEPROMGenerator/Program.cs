@@ -32,6 +32,10 @@ namespace ControlLogicEEPROMGenerator
             var res = splitter.SplitData(data);
             Console.WriteLine("writing files..");
             var outputPath = GetOutputDirectory();
+            if (outputPath == "")
+            {
+                return;
+            }
             splitter.WriteFiles(res, outputPath);
 
             Console.WriteLine("DONE");
