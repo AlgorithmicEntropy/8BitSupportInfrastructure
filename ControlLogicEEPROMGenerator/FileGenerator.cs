@@ -8,7 +8,7 @@ using ControlLogicEEPROMGenerator.Core;
 
 namespace ControlLogicEEPROMGenerator
 {
-    class Program
+    class FileGenerator
     {
         [STAThread]
         static void Main(string[] args)

@@ -24,10 +24,10 @@ namespace ArduinoEEPROMProg.Core
             {
                 var line = reader.ReadLine();
                 var entries = line.Split(new char[] { ';' });
-                char[] code = new char[entries.Length-1];
-                for (int i = 1; i < entries.Length; i++)
+                char[] code = new char[entries[1].Length];
+                for (int i = 0; i < entries[1].Length; i++)
                 {
-                    code[i - 1] = char.Parse(entries[i]);
+                    code[i] = char.Parse(entries[1].Substring(i, 1));
                 }
                 dict.Add(int.Parse(entries[0]), code);
             }

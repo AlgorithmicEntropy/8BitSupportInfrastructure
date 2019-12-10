@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Core\CSVParser.cs" />
     <Compile Include="Core\DataToFileSplitter.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="FileGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

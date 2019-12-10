@@ -7,7 +7,7 @@ using System.IO.Ports;
 
 namespace ArduinoEEPROMProg.Core
 {
-    public class SerialConnection
+    public class SerialConnection : IDisposable
     {
         private SerialPort serial;
 
@@ -18,11 +18,18 @@ namespace ArduinoEEPROMProg.Core
             serial.BaudRate = 9600;
         }
 
+        public void Dispose()
+        {
+            serial.Dispose();
+        }
+
         public void Send(byte[] data)
         {
             serial.Open();
             serial.Write(data, 0, data.Length);
             serial.Close();
         }
+
+        
     }
 }

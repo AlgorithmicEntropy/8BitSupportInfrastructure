@@ -20,7 +20,15 @@ namespace ArduinoEEPROMProg.Core
         {
             SerialConnection connection = new SerialConnection(port);
             //init
-            connection.Send(new byte[] { 0xFF });
+            try
+            {
+                connection.Send(new byte[] { 0xFF });
+            }
+            catch (Exception)
+            {
+                connection.Dispose();
+                throw;
+            }
 
             foreach (var entry in data.GetData())
             {
@@ -30,6 +38,9 @@ namespace ArduinoEEPROMProg.Core
                 byte codeByte = Convert.ToByte(codeString);
                 connection.Send(new byte[] { codeByte });
             }
+
+            //cleanup
+            connection.Dispose();
         }
     }
 }
