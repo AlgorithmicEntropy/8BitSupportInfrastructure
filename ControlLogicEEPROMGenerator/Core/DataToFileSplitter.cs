@@ -42,10 +42,10 @@ namespace ControlLogicEEPROMGenerator.Core
                         builders[i].Append(entry.Value[j]);
                     }
 
-                    //TODO fix file gen
                     dataLine = builders[i].ToString();
                     index = Math.Min(8, dataLine.Length - i * 8);
-                    returnList[i].Add(entry.Key, dataLine.Substring(8*i, index));
+                    string subDataForFile = dataLine.Substring(8 * i, index);
+                    returnList[i].Add(entry.Key, subDataForFile.PadRight(8, '0'));
                     builders[i].Clear();
                 }
             }

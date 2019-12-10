@@ -58,10 +58,14 @@ namespace ControlLogicEEPROMGenerator
 
         private static string GetOutputDirectory()
         {
-            var folderDialog = new FolderBrowserDialog();
-            folderDialog.Description = "Select output directory";
+            var folderDialog = new FolderBrowserDialog
+            {
+                Description = "Select output directory"
+            };
             folderDialog.ShowDialog();
-            return folderDialog.SelectedPath;
+            var path = folderDialog.SelectedPath;
+            folderDialog.Dispose();
+            return path;
         }
     }
 }

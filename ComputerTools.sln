@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlLogicEEPROMGenerator
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompLib", "8BitLib\CompLib.csproj", "{7C504C28-95D2-49DC-B96E-185404B6B3B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoEEPROMProg", "ArduinoEEPROMProg\ArduinoEEPROMProg.csproj", "{7C8E1B03-C97A-47AD-9867-AB68A93669FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7C504C28-95D2-49DC-B96E-185404B6B3B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C504C28-95D2-49DC-B96E-185404B6B3B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C504C28-95D2-49DC-B96E-185404B6B3B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C8E1B03-C97A-47AD-9867-AB68A93669FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8E1B03-C97A-47AD-9867-AB68A93669FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8E1B03-C97A-47AD-9867-AB68A93669FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8E1B03-C97A-47AD-9867-AB68A93669FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
