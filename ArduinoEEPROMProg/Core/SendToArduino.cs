@@ -19,23 +19,19 @@ namespace ArduinoEEPROMProg.Core
         public void SendData(ControlData data, string port)
         {
             SerialConnection connection = new SerialConnection(port);
-            //init
-            try
-            {
-                connection.Send(new byte[] { 0xFF });
-            }
-            catch (Exception)
-            {
-                connection.Dispose();
-                throw;
-            }
 
             foreach (var entry in data.GetData())
             {
                 byte[] address = BitConverter.GetBytes((Int16)entry.Key);
+                Console.WriteLine("Add: " + BitConverter.ToInt16(address, 0));
                 connection.Send(address);
-                string codeString = new string(entry.Value);
-                byte codeByte = Convert.ToByte(codeString);
+
+                byte codeByte = 0;
+                for (int b = 0; b <= 7; b++)
+                {
+                    codeByte |= (byte)((entry.Value[b] == '1' ? 1 : 0) << (7 - b));
+                }
+                Console.WriteLine("value: " + codeByte);
                 connection.Send(new byte[] { codeByte });
             }
 
