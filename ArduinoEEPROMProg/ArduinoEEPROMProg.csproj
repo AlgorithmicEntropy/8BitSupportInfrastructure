@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArduinoDataTransmitter.cs" />
     <Compile Include="Core\ReadSubfile.cs" />
     <Compile Include="Core\SendToArduino.cs" />
     <Compile Include="Core\SerialConnection.cs" />

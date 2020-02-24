@@ -31,6 +31,7 @@ namespace ArduinoEEPROMProg.Core
                 }
                 dict.Add(int.Parse(entries[0]), code);
             }
+            reader.Dispose();
             return new ControlData(dict, 8);
         }
     }

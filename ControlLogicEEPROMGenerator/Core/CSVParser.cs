@@ -24,7 +24,7 @@ namespace ControlLogicEEPROMGenerator.Core
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();
-                var values = line.Split(';');
+                var values = line.Split(',');
                 var controllValues = new char[values.Count() - 1];
                 for(int i = 1; i < values.Count();i++)
                 {
